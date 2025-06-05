@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  db:
+    image: 'mysql:latest'
+    container_name: accommodation-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: AccommodationService
+
+  app:
+    build: ./
+    image: sha256:283bce2999ab8d31aadfa60cbb16afa9b263441726a63e1f077e2716060ec967
+    container_name: accommodation-service
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/AccommodationService?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - db
