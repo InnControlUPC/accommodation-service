@@ -1,4 +1,4 @@
-package com.inncontrol.accommodation.domain;
+package com.github.inncontrol.accommodation.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;

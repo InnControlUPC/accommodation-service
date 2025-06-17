@@ -1,8 +1,8 @@
-package com.inncontrol.accommodation.controller;
+package com.github.inncontrol.accommodation.controller;
 
-import com.inncontrol.accommodation.application.RoomService;
-import com.inncontrol.accommodation.domain.Room;
-import com.inncontrol.accommodation.dto.RoomDTO;
+import com.github.inncontrol.accommodation.application.RoomService;
+import com.github.inncontrol.accommodation.domain.Room;
+import com.github.inncontrol.accommodation.dto.RoomDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;

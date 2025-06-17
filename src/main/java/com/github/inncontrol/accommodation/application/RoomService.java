@@ -1,10 +1,10 @@
-package com.inncontrol.accommodation.application;
+package com.github.inncontrol.accommodation.application;
 
-import com.inncontrol.accommodation.domain.Room;
-import com.inncontrol.accommodation.domain.RoomRepository;
-import com.inncontrol.accommodation.domain.RoomStatus;
-import com.inncontrol.accommodation.domain.RoomType;
-import com.inncontrol.accommodation.dto.RoomDTO;
+import com.github.inncontrol.accommodation.domain.Room;
+import com.github.inncontrol.accommodation.domain.RoomRepository;
+import com.github.inncontrol.accommodation.domain.RoomStatus;
+import com.github.inncontrol.accommodation.domain.RoomType;
+import com.github.inncontrol.accommodation.dto.RoomDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

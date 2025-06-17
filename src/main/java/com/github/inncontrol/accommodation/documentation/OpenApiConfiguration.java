@@ -1,4 +1,4 @@
-package com.inncontrol.accommodation.documentation;
+package com.github.inncontrol.accommodation.documentation;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;

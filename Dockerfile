@@ -15,7 +15,7 @@ RUN mvn clean install -DskipTests
 FROM openjdk:17-jdk-slim
 
 # Copy the jar file from the build stage
-COPY --from=build /app/target/accommodation-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/accommodation-service-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the application's port
 EXPOSE 8080

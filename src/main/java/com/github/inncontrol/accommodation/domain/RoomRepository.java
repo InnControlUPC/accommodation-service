@@ -1,4 +1,4 @@
-package com.inncontrol.accommodation.domain;
+package com.github.inncontrol.accommodation.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.inncontrol.accommodation.dto;
+package com.github.inncontrol.accommodation.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
