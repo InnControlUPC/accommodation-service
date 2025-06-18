@@ -1,25 +1,22 @@
 version: '3.8'
-
 services:
-  db:
-    image: 'mysql:latest'
-    container_name: accommodation-db
+  accommodation-mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Admin123admin
+      MYSQL_DATABASE: InventService
     ports:
       - "3307:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD: root
-      MYSQL_DATABASE: AccommodationService
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  app:
+  accommodation-service-app:
     build: ./
-    image: sha256:283bce2999ab8d31aadfa60cbb16afa9b263441726a63e1f077e2716060ec967
-    container_name: accommodation-service
     ports:
-      - "8080:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/AccommodationService?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
+      - "8088:8088"
     depends_on:
-      - db
+      accommodation-mysql:
+        condition: service_healthy
